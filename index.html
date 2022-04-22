@@ -6,10 +6,30 @@
     <title>BuzzQuizz</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="quizzCreation.css"/>
   </head>
   <body>
     <div class="pagina2"></div>
-    <div class="pagina3"></div>
+      <header>BuzzQuizz</header>
+
+<!-- Início página 3-->
+
+      <container>
+      <div class="quizzCreationBeginning">
+        <h1>Comece pelo começo</h1>
+        <div class="quizzCreationBox1">
+          <input type="text" placeholder="Título do seu quizz">
+          <input type="text" name="" id="" placeholder="URL da imagem do seu quizz">
+          <input type="text" placeholder="Quantidade de perguntas do quizz">
+          <input type="text" placeholder="Quantidade de níveis do quizz">
+        </div>
+        <div class="buttonProceedToCreateQuestions" onclick="proceedToCreateQuestions()">Prosseguir para criar perguntas</div>
+      </div>
+      <div class="quizzCreationQuestions">
+        <!-- Perguntas inseridas pelo js -->
+      </div>
+      </container>
+    <script src="quizzCreation.js"></script>
     <script src="js.js"></script>
   </body>
 </html>
