@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="quizzCreation.css" />
   </head>
   <body>
     <!-- Topo da página -->
@@ -38,7 +39,32 @@
       </div>
       <div class="topTitle">Titulozada</div>
     </div>
+
+    <!-- Início página 3-->
+
+    <container>
+      <div class="quizzCreationBeginning hide">
+        <h1>Comece pelo começo</h1>
+        <div class="quizzCreationBox1">
+          <input type="text" placeholder="Título do seu quizz" />
+          <input type="text" placeholder="URL da imagem do seu quizz" />
+          <input type="text" placeholder="Quantidade de perguntas do quizz" />
+          <input type="text" placeholder="Quantidade de níveis do quizz" />
+        </div>
+        <div
+          class="buttonProceedToCreateQuestions"
+          onclick="proceedToCreateQuestions()"
+        >
+          Prosseguir para criar perguntas
+        </div>
+      </div>
+      <div class="quizzCreationQuestions">
+        <!-- Perguntas inseridas pelo js -->
+      </div>
+    </container>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="quizzCreation.js"></script>
     <script src="js.js"></script>
   </body>
 </html>
