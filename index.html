@@ -13,10 +13,9 @@
     />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="quizzCreation.css"/>
+    <link rel="stylesheet" href="quizzCreation.css" />
   </head>
   <body>
-
     <!-- Topo da página -->
     <header>
       <h1>BuzzQuizz</h1>
@@ -33,11 +32,19 @@
       <!-- todos os quizzes -->
     </main>
     <!-- Aqui começa a página 2 -->
-    <div class="quizzSelecionado"></div>
-    
+    <div class="quizzSelecionado hide">
+      <div class="topImg">
+        <img
+          src="https://tm.ibxk.com.br/2021/12/16/16110500294149.jpg?ims=1120x420"
+        />
+      </div>
+      <div class="topTitle">Titulozada</div>
+    </div>
+
     <!-- Início página 3-->
 
     <container>
+<<<<<<< HEAD
       <div class="quizzCreationBeginning">
         <h2>Comece pelo começo</h2>
         <div class="quizzCreationBox1">
@@ -47,12 +54,28 @@
           <input class="numberOfLevels" type="text" autocomplete="off" placeholder="Quantidade de níveis do quizz">
         </div>
         <div class="quizzCreationButton" onclick="questionsCreation()">Prosseguir para criar perguntas</div>
+=======
+      <div class="quizzCreationBeginning hide">
+        <h1>Comece pelo começo</h1>
+        <div class="quizzCreationBox1">
+          <input type="text" placeholder="Título do seu quizz" />
+          <input type="text" placeholder="URL da imagem do seu quizz" />
+          <input type="text" placeholder="Quantidade de perguntas do quizz" />
+          <input type="text" placeholder="Quantidade de níveis do quizz" />
+        </div>
+        <div
+          class="buttonProceedToCreateQuestions"
+          onclick="proceedToCreateQuestions()"
+        >
+          Prosseguir para criar perguntas
+        </div>
+>>>>>>> 7ad56b8c3a0fce60ed83d2cbbe771ad78c0fb641
       </div>
       <div class="quizzCreation">
         <!-- conteúdo inserido pelo js -->
       </div>
-      </container>
-    
+    </container>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="quizzCreation.js"></script>
     <script src="js.js"></script>

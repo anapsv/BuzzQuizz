@@ -5,18 +5,17 @@ let expressionWWW = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-
 let WWWWRegex = new RegExp(expressionWWW);
 
 function conditionsBeggining() {
-    // let quizzTitleInput = document.querySelector(".quizzTitleInput").value;
-    // let URLImage = document.querySelector(".URLQuizzImageInput").value;
-    // let numberOfQuestions =  document.querySelector(".numberOfQuestions").value;
-    // let numberOfLevels = document.querySelector(".numberOfLevels").value;
-    // if(20<= quizzTitleInput.length && quizzTitleInput.length<=65 && (URLImage.match(HTTPSRegex) || URLImage.match(WWWWRegex)) && numberOfQuestions >=3 && numberOfLevels >=2){
-    //     console.log(quizzTitleInput.length);
-    //     return true;
-    // }else{
-    //     console.log(quizzTitleInput.length);
-    //     return false;
-    // }
-    return true;
+    let quizzTitleInput = document.querySelector(".quizzTitleInput").value;
+    let URLImage = document.querySelector(".URLQuizzImageInput").value;
+    let numberOfQuestions =  document.querySelector(".numberOfQuestions").value;
+    let numberOfLevels = document.querySelector(".numberOfLevels").value;
+    if(20<= quizzTitleInput.length && quizzTitleInput.length<=65 && (URLImage.match(HTTPSRegex) || URLImage.match(WWWWRegex)) && numberOfQuestions >=3 && numberOfLevels >=2){
+        console.log(quizzTitleInput.length);
+        return true;
+    }else{
+        console.log(quizzTitleInput.length);
+        return false;
+    }
 }
 
 function proceedToCreateQuestions() {
@@ -63,27 +62,26 @@ function questionsCreation() {
 }
 
 function conditionsQuestions(){
-    // let questionText = document.querySelector(".questionTextInput").value;
-    // let backgroundColor = document.querySelector(".backgroundColorInput").value;
-    // let answerText = document.querySelector(".answerTextInput").value;
-    // let URLAnswer = document.querySelector(".imgURLInput").value;
-    // let wrongAnswer1 = document.querySelector(".wrongAnswer1").value;
-    // let URLWrongAnswer1 = document.querySelector(".imgURLInput1").value;
-    // let wrongAnswer2 = document.querySelector(".wrongAnswer2").value;
-    // let URLWrongAnswer2 = document.querySelector(".imgURLInput2").value;
-    // let wrongAnswer3 = document.querySelector(".wrongAnswer3").value;
-    // let URLWrongAnswer3 = document.querySelector(".imgURLInput3").value;
+    let questionText = document.querySelector(".questionTextInput").value;
+    let backgroundColor = document.querySelector(".backgroundColorInput").value;
+    let answerText = document.querySelector(".answerTextInput").value;
+    let URLAnswer = document.querySelector(".imgURLInput").value;
+    let wrongAnswer1 = document.querySelector(".wrongAnswer1").value;
+    let URLWrongAnswer1 = document.querySelector(".imgURLInput1").value;
+    let wrongAnswer2 = document.querySelector(".wrongAnswer2").value;
+    let URLWrongAnswer2 = document.querySelector(".imgURLInput2").value;
+    let wrongAnswer3 = document.querySelector(".wrongAnswer3").value;
+    let URLWrongAnswer3 = document.querySelector(".imgURLInput3").value;
 
-    // for(let h=1; h<=9; h++) {
-    // if(questionText.length >= 20 && answerText.length > 0 && backgroundColor[0] == "#" && (backgroundColor[h] == "a,b,c,d,e,f" || backgroundColor[h] == 0,1,2,3,4,5,6,7,8,9) && (URLAnswer.match(HTTPSRegex) || URLAnswer.match(WWWWRegex)) && wrongAnswer1.length > 0 && (URLWrongAnswer1.match(HTTPSRegex) || URLWrongAnswer1.match(WWWWRegex)) && wrongAnswer2.length > 0 && (URLWrongAnswer2.match(HTTPSRegex) || URLWrongAnswer2.match(WWWWRegex)) && wrongAnswer3.length > 0 && (URLWrongAnswer3.match(HTTPSRegex) || URLWrongAnswer3.match(WWWWRegex))){
-    //     console.log("deu certo");
-    //     return true;
-    // }else{
-    //     console.log("ffffffff");
-    //     return false;
-    // }
-    //}
-    return true;
+    for(let h=1; h<=9; h++) {
+    if(questionText.length >= 20 && answerText.length > 0 && backgroundColor[0] == "#" && (backgroundColor[h] == "a,b,c,d,e,f" || backgroundColor[h] == 0,1,2,3,4,5,6,7,8,9) && (URLAnswer.match(HTTPSRegex) || URLAnswer.match(WWWWRegex)) && wrongAnswer1.length > 0 && (URLWrongAnswer1.match(HTTPSRegex) || URLWrongAnswer1.match(WWWWRegex)) && wrongAnswer2.length > 0 && (URLWrongAnswer2.match(HTTPSRegex) || URLWrongAnswer2.match(WWWWRegex)) && wrongAnswer3.length > 0 && (URLWrongAnswer3.match(HTTPSRegex) || URLWrongAnswer3.match(WWWWRegex))){
+        console.log("deu certo");
+        return true;
+    }else{
+        console.log("ffffffff");
+        return false;
+    }
+    }
 }
 
 function quizzCreationLevels() {
@@ -110,23 +108,22 @@ function quizzCreationLevels() {
 }
 
 function conditionsLevels() {
-    // let levelTitle = document.querySelector(".levelTitle").value;
-    // let gradingPercentage = document.querySelector(".gradingPercentage").value;
-    // let URLImageLevel = document.querySelector(".URLImageLevel").value;
-    // let levelDescription = document.querySelector(".levelDescription").value;
+    let levelTitle = document.querySelector(".levelTitle").value;
+    let gradingPercentage = document.querySelector(".gradingPercentage").value;
+    let URLImageLevel = document.querySelector(".URLImageLevel").value;
+    let levelDescription = document.querySelector(".levelDescription").value;
     
-    // if (levelTitle.length >= 10 && gradingPercentage>=0 && gradingPercentage<=100 && (URLImageLevel.match(HTTPSRegex) || URLImageLevel.match(WWWWRegex)) && levelDescription.length >=30){
-    //     console.log("ok");
-    // }else{
-    //     console.log("fff");
-    // }
-    return true;
+    if (levelTitle.length >= 10 && gradingPercentage>=0 && gradingPercentage<=100 && (URLImageLevel.match(HTTPSRegex) || URLImageLevel.match(WWWWRegex)) && levelDescription.length >=30){
+        console.log("ok");
+    }else{
+        console.log("fff");
+    }
 }
 
 function finishedQuizz() {
     if(conditionsLevels() === true){
-    let quizzTitleInput = "Título do quizz";
-    let URLImageLevel = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg";
+        let quizzTitleInput = document.querySelector(".quizzTitleInput").value;
+        let URLImageLevel = document.querySelector(".URLQuizzImageInput").value;
     const finishedQuizz = document.querySelector(".quizzCreation");
     finishedQuizz.innerHTML = `<h2>Seu quizz está pronto!</h2>
     <div class="finishedQuizz"><img src="${URLImageLevel}" alt="Imagem de fundo sobre o quizz"/><div class="finishedQuizzTittle">${quizzTitleInput}</div></div>
