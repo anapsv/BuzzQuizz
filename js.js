@@ -32,6 +32,7 @@ function openSelectedQuizz(response) {
     `https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes/${id}`
   );
   responseQuizz.then(magica);
+  document.querySelector("container").classList.add("hide");
 }
 function magica(response) {
   quizz = response.data;
