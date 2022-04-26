@@ -20,6 +20,39 @@
       <h1>BuzzQuizz</h1>
     </header>
     <!-- Topo de página -->
+
+    <container>
+      <h2>Comece pelo começo</h2>
+      <div class="quizzCreationBox1">
+        <input
+          class="quizzTitleInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Título do seu quizz"
+        />
+        <input
+          class="URLQuizzImageInput"
+          type="text"
+          autocomplete="off"
+          placeholder="URL da imagem do seu quizz"
+        />
+        <input
+          class="numberOfQuestions"
+          type="text"
+          autocomplete="off"
+          placeholder="Quantidade de perguntas do quizz"
+        />
+        <input
+          class="numberOfLevels"
+          type="text"
+          autocomplete="off"
+          placeholder="Quantidade de níveis do quizz"
+        />
+      </div>
+      <div class="quizzCreationButton" onclick="proceedToCreateQuestions()">
+        Prosseguir para criar perguntas
+      </div>
+    </container>
     <main>
       <!-- todos os quizzes -->
       <div class="allQuizzes">
@@ -34,26 +67,6 @@
     <div class="quizzSelecionado hide"></div>
 
     <!-- Início página 3-->
-    <container class="hide">
-      <div class="quizzCreationBeginning">
-        <h1>Comece pelo começo</h1>
-        <div class="quizzCreationBox1">
-          <input type="text" placeholder="Título do seu quizz" />
-          <input type="text" placeholder="URL da imagem do seu quizz" />
-          <input type="text" placeholder="Quantidade de perguntas do quizz" />
-          <input type="text" placeholder="Quantidade de níveis do quizz" />
-        </div>
-        <div
-          class="buttonProceedToCreateQuestions"
-          onclick="proceedToCreateQuestions()"
-        >
-          Prosseguir para criar perguntas
-        </div>
-      </div>
-      <div class="quizzCreationQuestions">
-        <!-- Perguntas inseridas pelo js -->
-      </div>
-    </container>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="quizzCreation.js"></script>
